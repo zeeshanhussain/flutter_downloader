@@ -290,6 +290,7 @@ public class DownloadWorker extends Worker implements MethodChannel.MethodCallHa
                 switch (responseCode) {
                     case HttpURLConnection.HTTP_MOVED_PERM:
                     case HttpURLConnection.HTTP_SEE_OTHER:
+                    case 307:
                     case HttpURLConnection.HTTP_MOVED_TEMP:
                         log("Response with redirection code");
                         location = httpConn.getHeaderField("Location");

@@ -282,9 +282,9 @@ public class DownloadWorker extends Worker implements MethodChannel.MethodCallHa
                 // setup request headers if it is set
                 setupHeaders(httpConn, headers);
                 // try to continue downloading a file from its partial downloaded data.
-                if (isResume) {
-                    downloadedBytes = setupPartialDownloadedDataHeader(httpConn, filename, savedDir);
-                }
+//                 if (isResume) {
+//                     downloadedBytes = setupPartialDownloadedDataHeader(httpConn, filename, savedDir);
+//                 }
 
                 responseCode = httpConn.getResponseCode();
                 switch (responseCode) {
